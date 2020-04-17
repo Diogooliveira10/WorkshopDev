@@ -7,10 +7,6 @@ body {
     margin: 0;
 }
 
-.hide {
-    display: none; /* Mostrar */
-}
-
 a {
     color: #ff5e84;
     font-weight: bold;
@@ -91,7 +87,7 @@ button.fat:hover {
 }
 
 footer {
-     text-align: center; /* Alinhamento de texto */
+    text-align: center; /* Alinhamento de texto */
 
     font-size: 14px;
     font-weight: 400;
@@ -102,7 +98,7 @@ footer {
 }
 
 footer a {
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 
@@ -136,4 +132,137 @@ footer a {
 
 .idea .description {
     margin: 16px 0;
+}
+
+/* modal */
+
+#modal {
+    background: #ff5e84;
+
+    position: absolute; /* Vai posicionar o modal absoluta na página */
+    top: 0;
+    
+    width: 100vw; /* viewport width - Toda area visivel do dispositivo*/
+    height: 300vh; /* viewport height - Toda area visivel do dispositivo*/
+
+    display: flex;
+    /* align-items: center;  Alinhamento centro no eixo x */
+    justify-content: center; /* Alinhamento centro no eixo y*/
+
+    transition: 400ms;
+}
+
+#modal .content {
+    margin-top: 128px;
+
+    color: white;
+}
+
+#modal .content h1 {
+    text-align: center;
+
+    text-transform: uppercase; /* Deixando o texto grande */
+}
+
+#modal form {
+    width: 80%;
+    max-width: 800px;
+
+    margin: 0 auto; /* preenchendo a imagem */
+
+    display: grid; /* criando colunas */
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px; /* espaçamento no grid */
+}
+
+.content form div:nth-child(3),
+.content form div:nth-child(4),
+.content form div:nth-child(5) {
+    grid-column: span 2; 
+}
+
+form input,
+form textarea {
+    width: 100%;
+
+    padding: 12px; /* tamanho da caixa do texto */
+
+    box-sizing: border-box;
+
+    border-radius: 6px;
+    order: 1px solid rgba(141, 25, 52, 0.5);
+
+    outline: none;
+
+    font-size: 16px;
+}
+
+form label {
+    font-weight: 600;
+    line-height: 32px;
+    letter-spacing: 0.8px;
+}
+
+form a {
+
+    width: 150px;
+    height: 40px;
+
+    background-color: #ffffff22;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    border-radius: 6px;
+
+    align-self: end;
+
+    transition: 400ms;
+}
+
+form a:hover {
+
+    background: #fff;
+    color: #ff5E84;
+
+    text-decoration: none;
+}
+
+form button {
+    background: white;
+
+    width: 150px;
+    height: 40px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    margin-top: 32px;
+
+    grid-column: 2;
+
+    justify-self: end;
+
+    transition: 400ms;
+}
+
+form button:hover {
+    background-color: #0984e3;
+    color: white;
+
+    text-decoration: none;
+}
+
+#modal.hide {
+    /* display: none;  Mostrar o hide */
+
+    opacity: 0; /* Elemento está em tela mas está opaco, criando uma camada */
+    visibility: hidden; /* Não a mais visibilidade */
 }
