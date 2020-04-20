@@ -155,7 +155,7 @@ footer a {
 #modal {
     background: #ff5e84;
 
-    position: absolute; /* Vai posicionar o modal absoluta na página */
+    position: fixed; /* Vai posicionar o modal na página */
     top: 0;
     bottom: 0;
     right: 0;
